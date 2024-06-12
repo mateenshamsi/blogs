@@ -16,7 +16,9 @@ app.use(cors({
   }));
 app.use('/api/v1/auth',authRoute)
 app.use('/api/v1',postRoute)
-
+app.get('/',(req,res)=>{ 
+  res.send("Hello")
+})
 
 app.listen(3000,()=>{ 
     console.log("Listening on port 3000") 
