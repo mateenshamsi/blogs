@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: 'https://blogs-m0zq524eu-mateenshamsis-projects.vercel.app',
         changeOrigin: true,
         secure: false,
       },
