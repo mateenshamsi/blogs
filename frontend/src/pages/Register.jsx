@@ -19,10 +19,12 @@ function Register() {
           if(data)
             { 
               setUserInfo(data)
+              toast.success("Signed Up successfully")
               setRedirect(true)
             }
         }
         else{
+          toast.error("Error signing up")
           console.log("Cannot register user") 
         }
     }

@@ -32,7 +32,7 @@ function Login() {
       }
     } catch (err) {
       console.error("Login error:", err.message);
-      setMessage("An error occurred during login");
+      toast.error("An error occured during login") 
     }
   };
 
