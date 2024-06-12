@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { UserContext } from '../context/UserContext';
 import { Link, Navigate } from 'react-router-dom';
-
+import toast from 'react-hot-toast'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
