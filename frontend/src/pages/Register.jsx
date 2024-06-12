@@ -2,7 +2,7 @@ import React, { useState ,useContext} from 'react'
 import { UserContext } from '../context/UserContext'
 import axios from 'axios'
 import { Navigate } from 'react-router'
-
+import {toast} from 'react-hot-toast'
 function Register() {
   const [username,setUsername] = useState("")
   const [email,setEmail] = useState("")
