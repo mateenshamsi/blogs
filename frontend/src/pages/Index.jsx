@@ -10,7 +10,7 @@ export default function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('/api/v1/posts');
+        const response = await axios.get('https://blogs-three-iota.vercel.app/api/v1/posts');
         setPosts(response.data.posts); // Assuming the response structure
       } catch (error) {
         console.error('Error fetching posts:', error);
