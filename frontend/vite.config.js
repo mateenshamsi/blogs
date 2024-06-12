@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://blogs-m0zq524eu-mateenshamsis-projects.vercel.app',
+        target: 'https://blogs-five-lake.vercel.app/',
         changeOrigin: true,
         secure: false,
       },
