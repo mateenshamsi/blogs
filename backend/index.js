@@ -14,7 +14,7 @@ const port= process.env.PORT || 3000
 import connectDB from "./dbConnect.js"
 connectDB() 
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL||"https://blogs-pv3r.vercel.app/"||"localhost:5173",
     methods:['GET','POST'] 
   }));
 app.use('/api/v1/auth',authRoute)
