@@ -11,7 +11,7 @@ import React, { useContext, useEffect, useState } from 'react';
   
     const handleDelete = async () => {
       try {
-        const result = await axios.delete(`/api/v1/post/${id}/delete`);
+        const result = await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/v1/post/${id}/delete`);
         if (result.status === 200) {
           toast.success("Successfully deleted post")
           setRedirect(true);
@@ -26,7 +26,7 @@ import React, { useContext, useEffect, useState } from 'react';
     useEffect(() => {
       const getPost = async () => {
         try {
-          const result = await axios.get(`/api/v1/post/${id}`);
+          const result = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/post/${id}`);
           setPostData(result.data.post);
         } catch (error) {
           console.error('Error fetching the post:', error);

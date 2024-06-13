@@ -44,7 +44,7 @@ function EditPost() {
         formData.append('image', image);
       }
 
-      const result = await axios.put(`/api/v1/post/${id}/edit`, formData);
+      const result = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/v1/post/${id}/edit`, formData);
       console.log(result);
       if (result) {
         toast.success("Successfully edited post")

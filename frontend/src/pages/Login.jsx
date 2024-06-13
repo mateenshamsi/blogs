@@ -10,14 +10,11 @@ function Login() {
   const [redirect, setRedirect] = useState(false);
   const { userInfo, setUserInfo } = useContext(UserContext);
 
-  useEffect(() => {
-    console.log("Updated userInfo:", userInfo);
-  }, [userInfo]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post('/api/v1/auth/login', { email, password });
+      const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/login`, { email, password });
       const data = result.data;
      
       setUserInfo(data);

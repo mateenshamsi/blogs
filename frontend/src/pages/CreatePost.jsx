@@ -26,7 +26,7 @@ function CreatePostForm() {
       formData.append('content', content);
       formData.append('image', image);
 
-      const result = await axios.post('/api/v1/posts', formData);
+      const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/posts`, formData);
       console.log(result)
       if(result)
         { 

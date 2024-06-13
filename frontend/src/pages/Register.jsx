@@ -12,7 +12,7 @@ function Register() {
   const handleRegister = async(e)=>{
     e.preventDefault() 
     try{ 
-        const result = await axios.post('/api/v1/auth/signup',{username,email,password}) 
+        const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/signup`,{username,email,password}) 
         if(result)
         {
           const data=result.data
